@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div.error-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+div.error-container div {
+  padding: 20% 0 0 10%;
+}
+
+div.message {
+  text-align: center;
+}
+
+div.message h1 {
+  font-size: 220px;
+  color: #cf000f;
+}
+
+div.message h2 {
+  font-size: 50px;
+}
+
+div.message h3 {
+  margin: 4% 0 8% 0;
+  color: #cf000f;
+  font-size: 30px;
+}
+
+div.message a {
+  text-decoration: none;
+  background-color: #cf000f;
+  border: 3px solid #cf000f;
+  padding: 2.5% 7%;
+  font-size: larger;
+  transition: all 0.5s ease;
+}
+
+div.message a:hover {
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+div.gif {
+  margin-top: 20%;
+  filter: opacity(0.8);
+}
+
+@media screen and (max-width:1194px) {
+
+  div.message h1 {
+      font-size: 180px;
+  }
+
+  div.message h2 {
+      font-size: 40px;
+  }
+
+  div.message h3 {
+      font-size: 30px;
+  }
+
+  div.gif {
+      margin-top: 10%;
+  }
+  div.gif img{
+      margin-top:5% ;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  div.error-container {
+      display: block;
+  }
+
+  div.error-container div.message {
+      padding: 20% 0 0 0%;
+      text-align: center;
+  }
+  
+  div.error-container div.gif{
+      text-align: center;
+      margin-top: 10%;
+      padding: 0;
+  }
+}
+
+@media screen and (max-width:606px) {
+
+  div.message h1 {
+      font-size: 30vw;
+  }
+
+  div.message h2 {
+      font-size: 7vw;
+  }
+
+  div.message h3 {
+      font-size: 6vw;
+  }
+
+  div.message a {
+      padding: 2% 3%;
+      font-size: small;
+      transition: all 0.5s ease;
+  }
+  
+  div.message a:hover {
+      background-color: transparent;
+      transition: all 0.5s ease;
+  }
+
+  div.gif img{
+      width: 70%;
+  }
+}
+
+div.backgroundHome {
+  filter: brightness(25%);
+  width: 110vw;
+  height: 110vh;
+  background-image: url('../../public/statics/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.534);
+  animation: zoom 10s infinite alternate;
+}
+
+@keyframes zoom {
+  from {
+      transform: scale(1);
+  }
+
+  to {
+      transform: scale(1.1);
+  }
+}
+
+div.home div.info {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+div.info p {
+  margin: 3% 0 3% 0;
+  font-size: 15px;
+  color: rgb(236, 236, 236);
+}
+
+div.info h1 {
+  font-size: 60px;
+  color: #cf000f;
+}
+
+div.info a.contact {
+  text-decoration: none;
+  background-color: #cf000f;
+  border: 3px solid #cf000f;
+  padding: 2.5% 7%;
+  font-size: larger;
+  transition: all 0.5s ease;
+}
+
+div.info a.contact:hover {
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+div.home a.down {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%, 0);
+  height: 35px;
+  width: 20px;
+  border-radius: 50px;
+  border: 2px solid #cf000f;
+}
+
+
+@media screen and (max-width:600px) {
+
+  div.home div.info {
+      top: 10%;
+      left: 10%;
+  }
+
+}
+
+@media screen and (max-width:320px) {
+
+  div.home div.info {
+      top: 5%;
+      left: 3%;
+      text-align: center;
+  }
+
+  div.info h1 {
+      font-size: 50px;
+  }
+
+  div.info a.contact {
+      padding: 1.7% 4%;
+      font-size: 17px;
+      transition: all 0.5s ease;
+  }
+
+}
+
+/* a.down span{
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  animation: MoveDown 1s infinite alternate;
+}
+
+@keyframes MoveDown {
+  from {
+      transform: translate(-50%,-180%);
+  }
+  
+  to {
+      transform: translate(-50%,60%);
+  }
+} */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

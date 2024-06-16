@@ -1,0 +1,89 @@
+import React from 'react'
+import "./project.css"
+import portfolio from "../../../public/statics/portfolio.png"
+import Edification from "../../../public/statics/edification.png"
+import ISTE from "../../../public/statics/iste.png"
+import Peddlers from "../../../public/statics/peddlers.png"
+import Footer from '../components/Footer/footer'
+import Image from 'next/image'
+
+
+const Projects = [
+  {
+    name: 'Edification',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    code: 'https://github.com/mekaustubh28/Edification',
+    website: 'https://mekaustubh28.github.io/Edification/index.html',
+    image: Edification,
+    desc: 'Sample website which provide free mock test.',
+  },
+  {
+    name: 'ISTE',
+    skills: ['Gatsby', 'Styled-Component'],
+    code: 'https://github.com/istenith/istenith.github.io',
+    website: 'https://www.istenith.com/',
+    image: ISTE,
+    desc: 'My Society website, I contributed to it.',
+  },
+  {
+    name: 'Peddlers',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    code: 'https://github.com/mekaustubh28/html-assassins',
+    website: 'https://mekaustubh28.github.io/html-assassins/',
+    image: Peddlers,
+    desc: 'Website for my front end Challenge.',
+  },
+  {
+    name: 'Portfolio',
+    skills: ['React', 'css', 'javascript'],
+    code: 'https://github.com/mekaustubh28/portfolio',
+    website: 'https://mekaustubh28.github.io/Edification/index.html',
+    image: portfolio,
+    desc: 'My Portfolio website.',
+  },
+]
+
+
+export default function Project() {
+
+  return (
+    <div className="project-container">
+      <div className="backgroundProject" style={{ position: "fixed", zIndex: -9 }}></div>
+      <div className="project">
+        <div className="title-project">
+          <h1>Selected Projects<span>.</span></h1>
+        </div>
+        <div className="projects">
+          {Projects.map((value, index) => {
+            return (
+              // eslint-disable-next-line
+              <a className="project" id={value.name} key={index}>
+                <Image src={value.image} className={value.name} alt="projectImage" />
+                <div className="details">
+                  <div className="projectName">
+                    <h1>{value.name}</h1>
+                    {
+                      value.skills.map((skill, i) => {
+                        return (
+                          <span key={i}>
+                            <span>{skill}</span><span className="nextCircle"></span>
+                          </span>)
+                      })
+                    }
+                    <br></br>
+                    <p className="desc">{value.desc}</p>
+                  </div>
+                  <div className="projectLinks">
+                    <a href={value.code} className="link viewcode" target="_blank" rel="noreferrer">View Code</a><span className="extraspace"><br></br><br></br><br></br></span>
+                    <a href={value.website} className="link viewwebsite" target="_blank" rel="noreferrer">Visit Website</a>
+                  </div>
+                </div>
+              </a>
+            )
+          })}
+        </div>
+      </div>
+      <Footer />
+    </div>
+  )
+}

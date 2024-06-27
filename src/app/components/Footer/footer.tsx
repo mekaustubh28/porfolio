@@ -2,7 +2,7 @@ import React from 'react'
 import "./footer.css"
 import Logo from "../../../../public/statics/logored.svg"
 import Image from 'next/image'
-import ContactSVG from '../navbar/contactSVG'
+import Mail from "../../../../public/statics/mail.svg"
 
 export default function Footer() {
 
@@ -17,7 +17,8 @@ export default function Footer() {
         <div className="contactInfo">
           <h2>Contact Information<span>.</span></h2>
           <p>Feel free to reach out to me any time.</p>
-          <a href="mailto:hi@vermakaustubh.in"><span><ContactSVG /></span>hi@vermakaustubh.in</a>
+          <Image src={Mail} className="m-auto svgForMobile" alt="My Logo" width={23} height={23} />
+          <a href="mailto:vermakaustubh@gmail.com">vermakaustubh@gmail.com</a>
           <h2 className="day">Have a {wish[day]}</h2>
         </div>
         <div className="logo">

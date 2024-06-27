@@ -1,41 +1,42 @@
 import React from 'react'
 import "./project.css"
 import portfolio from "../../../public/statics/portfolio.png"
-import Edification from "../../../public/statics/edification.png"
-import ISTE from "../../../public/statics/iste.png"
-import Peddlers from "../../../public/statics/peddlers.png"
+import Huego from "../../../public/statics/huego.png"
+import eumlet from "../../../public/statics/eumlet.png"
+import fake from "../../../public/statics/fake.png"
 import Footer from '../components/Footer/footer'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const Projects = [
   {
-    name: 'Edification',
-    skills: ['HTML', 'CSS', 'JavaScript'],
-    code: 'https://github.com/mekaustubh28/Edification',
-    website: 'https://mekaustubh28.github.io/Edification/index.html',
-    image: Edification,
-    desc: 'Sample website which provide free mock test.',
+    name: 'Huego.ai',
+    skills: ['AWS', 'FastAPI', 'Typescript', 'Docker', 'NextJs'],
+    code: '',
+    website: 'https://huego.ai/',
+    image: Huego,
+    desc: 'Client Project. an interactive platform that leverage power of LLM  by addressing medical needs of user comprehensively',
   },
   {
-    name: 'ISTE',
-    skills: ['Gatsby', 'Styled-Component'],
-    code: 'https://github.com/istenith/istenith.github.io',
-    website: 'https://www.istenith.com/',
-    image: ISTE,
-    desc: 'My Society website, I contributed to it.',
+    name: 'Eumlet App',
+    skills: ['NextJS', 'AWS', 'FastAPI', 'Docker', 'Web3', 'Blockchain'],
+    code: '',
+    website: 'https://app.eumlet.com/',
+    image: eumlet,
+    desc: 'Client Project(Eumlet) under Athena Consulting. cutting-edge web3 crypto-sharing platform.',
   },
   {
-    name: 'Peddlers',
-    skills: ['HTML', 'CSS', 'JavaScript'],
-    code: 'https://github.com/mekaustubh28/html-assassins',
-    website: 'https://mekaustubh28.github.io/html-assassins/',
-    image: Peddlers,
-    desc: 'Website for my front end Challenge.',
+    name: 'Fake Medication Detection System',
+    skills: ['Vite', 'Blockchain', 'Solidity'],
+    code: 'https://github.com/mekaustubh28/fake_medication_system',
+    website: '',
+    image: fake,
+    desc: 'Personal Project. Website helps to track medication from manufacturer to patient. This helps to reduce falacy done in medicial fields',
   },
   {
     name: 'Portfolio',
-    skills: ['React', 'css', 'javascript'],
+    skills: ['NextJS', 'Tailwind', 'Typescript', 'vercel'],
     code: 'https://github.com/mekaustubh28/portfolio',
     website: 'https://mekaustubh28.github.io/Edification/index.html',
     image: portfolio,
@@ -49,7 +50,7 @@ export default function Project() {
   return (
     <div className="project-container">
       <div className="backgroundProject" style={{ position: "fixed", zIndex: -9 }}></div>
-      <div className="project">
+      <div className="title-project-main">
         <div className="title-project">
           <h1>Selected Projects<span>.</span></h1>
         </div>
@@ -57,11 +58,11 @@ export default function Project() {
           {Projects.map((value, index) => {
             return (
               // eslint-disable-next-line
-              <a className="project" id={value.name} key={index}>
+              <div className="project" id={value.name} key={index}>
                 <Image src={value.image} className={value.name} alt="projectImage" />
                 <div className="details">
                   <div className="projectName">
-                    <h1>{value.name}</h1>
+                    <h1 className='text-2xl'>{value.name}</h1>
                     {
                       value.skills.map((skill, i) => {
                         return (
@@ -72,13 +73,11 @@ export default function Project() {
                     }
                     <br></br>
                     <p className="desc">{value.desc}</p>
-                  </div>
-                  <div className="projectLinks">
-                    <a href={value.code} className="link viewcode" target="_blank" rel="noreferrer">View Code</a><span className="extraspace"><br></br><br></br><br></br></span>
-                    <a href={value.website} className="link viewwebsite" target="_blank" rel="noreferrer">Visit Website</a>
+                    {value.code !== '' && <a href={value.code} className="link viewcode" target="_blank" rel="noreferrer">View Code</a>}<span className="extraspace"><br></br><br></br><br></br></span>
+                    {value.website !== '' && <a href={value.website} className="link viewwebsite" target="_blank" rel="noreferrer">Visit Website</a>}
                   </div>
                 </div>
-              </a>
+              </div>
             )
           })}
         </div>

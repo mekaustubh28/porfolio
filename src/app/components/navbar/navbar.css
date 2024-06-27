@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+.active{
+  border-bottom: 2px solid #cf000f;
+  padding: 0 10px 10px 10px;
+}
 
 div.nav h1 span {
   color: #cf000f;
@@ -49,17 +53,13 @@ div.navbar ul li {
   text-transform: uppercase;
 }
 
-div.navbar ul li:nth-child(4) {
-  display: none;
-}
-
 div.nav ul li a {
   font-size: 15px;
   color: white;
   transition: 0.3s ease-in-out;
 }
 
-span.svgForMobile {
+.svgForMobile {
   display: none;
 }
 
@@ -124,16 +124,24 @@ div.complete {
 /* CSS for mobiles */
 
 @media screen and (max-width:600px) {
+  .active{
+    color: #cf000f!important;
+    border-bottom: 0;
+    padding: 0;
+  }
+  .svgForMobile {
+    display: block;
+  }
 
-  span.svgForMobile {
-    display: contents;
+  .name_hide{
+    display: none;
   }
 
   div.navbar {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.729);
     border-radius: 20px 20px 0 0;
     bottom: 0;
-    padding-top: 1%;
+    padding: 10px 0 10px 0;
   }
 
   div.nav a.logo {
@@ -153,10 +161,6 @@ div.complete {
 
   a.mail {
     display: none;
-  }
-
-  div.navbar ul li:nth-child(4) {
-    display:contents;
   }
 
   div.social{

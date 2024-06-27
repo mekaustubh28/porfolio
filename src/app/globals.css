@@ -139,6 +139,7 @@ div.backgroundHome {
   }
 }
 
+
 div.home div.info {
   position: absolute;
   top: 30%;
@@ -191,7 +192,7 @@ div.home a.down {
 
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:450px) {
 
   div.home div.info {
       top: 5%;

@@ -1,10 +1,10 @@
-export default function ContactSVG() {
+export default function ContactSVG(props: any) {
   return (
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-      width="22" height="22" viewBox="0 0 1280.000000 1280.000000"
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" className="svgForMobile m-auto"
+      width="15" height="15" viewBox="0 0 1280.000000 1280.000000"
       preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-        fill="white" stroke="none">
+        fill={`${props.pathname === '/' ? '#cf000f' : 'white'}`} stroke="none">
         <path d="M6145 12794 c-216 -13 -391 -28 -530 -45 -995 -122 -1927 -467 -2760
 -1022 -907 -604 -1648 -1433 -2146 -2402 -395 -769 -615 -1549 -690 -2450 -17
 -193 -17 -757 0 -950 75 -901 295 -1681 690 -2450 610 -1188 1578 -2156 2766

@@ -39,7 +39,7 @@ const Projects = [
     skills: ['NextJS', 'Tailwind', 'Typescript', 'vercel'],
     code: 'https://github.com/mekaustubh28/portfolio',
     website: 'https://mekaustubh28.github.io/Edification/index.html',
-    image: '/statics/portfolio.png',
+    image: '/public/statics/portfolio.png',
     desc: 'My Portfolio website.',
   },
 ]

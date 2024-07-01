@@ -1,9 +1,9 @@
 import React from 'react'
 import "./project.css"
-import portfolio from "../../../public/statics/portfolio.png"
-import Huego from "../../../public/statics/huego.png"
-import eumlet from "../../../public/statics/eumlet.png"
-import fake from "../../../public/statics/fake.png"
+import portfolio from "../../../statics/portfolio.png"
+import Huego from "../../../statics/huego.png"
+import eumlet from "../../../statics/eumlet.png"
+import fake from "../../../statics/fake.png"
 import Footer from '../components/Footer/footer'
 import Image from 'next/image'
 import Link from 'next/link'

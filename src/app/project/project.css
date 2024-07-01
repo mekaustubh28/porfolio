@@ -58,6 +58,7 @@ div.project {
     padding: 10px;
     position: relative;
     height: 400px;
+    /* width: ; */
     overflow: hidden;
 }
 
@@ -119,7 +120,7 @@ div.project:hover img {
 
 @media screen and (min-width:2185px) {
     div.project img {
-        height: 120%;
+        /* height: 120%; */
     }
 
 }
@@ -200,7 +201,7 @@ div.project:hover img {
 @media screen and (max-width:463px) {
 
     div.project {
-        height: 210px;
+        /* height: 210px; */
     }
 
 }

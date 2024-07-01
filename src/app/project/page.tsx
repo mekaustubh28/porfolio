@@ -1,9 +1,9 @@
 import React from 'react'
 import "./project.css"
-import portfolio from "../../../statics/portfolio.png"
-import Huego from "../../../statics/huego.png"
-import eumlet from "../../../statics/eumlet.png"
-import fake from "../../../statics/fake.png"
+import portfolio from "../../../public/statics/portfolio.png"
+import Huego from "../../../public/statics/huego.png"
+import eumlet from "../../../public/statics/eumlet.png"
+import fake from "../../../public/statics/fake.png"
 import Footer from '../components/Footer/footer'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -39,7 +39,7 @@ const Projects = [
     skills: ['NextJS', 'Tailwind', 'Typescript', 'vercel'],
     code: 'https://github.com/mekaustubh28/portfolio',
     website: 'https://mekaustubh28.github.io/Edification/index.html',
-    image: portfolio,
+    image: '/statics/portfolio.png',
     desc: 'My Portfolio website.',
   },
 ]
@@ -59,7 +59,7 @@ export default function Project() {
             return (
               // eslint-disable-next-line
               <div className="project" id={value.name} key={index}>
-                <Image src={value.image} className={value.name} alt="projectImage" />
+                <Image src={value.image} className={value.name} alt="projectImage" width={600} height={400}/>
                 <div className="details">
                   <div className="projectName">
                     <h1 className='text-2xl'>{value.name}</h1>
